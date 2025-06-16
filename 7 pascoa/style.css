@@ -1,0 +1,319 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.header {
+    background-color: #1C1C1B;
+    padding: 15px;
+    text-align: center;
+}
+
+.textheader {
+    align-items: left;
+    margin-left: 30px;
+}
+
+.logo-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.banner img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.screen {
+    text-align: center;
+}
+
+.screen h2 {
+    color: #25D366;
+}
+
+.barra2 {
+    background-color: gray;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            box-sizing: border-box;
+}
+
+.btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 5px;
+}
+
+.btn:hover {
+    background-color: #388e3c;
+}
+
+.btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.progress {
+    height: 20px;
+    background-color: #2196f3;
+    border-radius: 10px;
+    width: 0%;
+    transition: width 0.5s;
+}
+
+.options {
+    margin: 20px 0;
+}
+
+.option {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Seção de Depoimentos */
+.testimonials {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.testimonials h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.testimonial-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonial-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.testimonial-text {
+    flex: 1;
+}
+
+.testimonial-text p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    font-style:normal;
+}
+
+.rating {
+    color: #FFD700; /* Cor dourada para as estrelas */
+    font-size: 16px;
+}
+
+/* Estilos para os nomes e datas */
+.testimonial-text strong {
+    display: block;
+    color: #020202;
+    margin-bottom: 5px;
+    font-size: 1.0em;
+}
+
+.testimonial-date {
+    display: block;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Melhor espaçamento */
+.testimonial-card {
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tela de Loading */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #4CAF50;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modal de Resultado */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+    color: #4CAF50;
+    margin-top: 0;
+}
+
+/* Banner do Modal */
+.modal-banner {
+    
+    margin: -30px -30px 20px -30px; /* Alinha com as bordas do modal */
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    height: 20vh;
+    min-height: 120px;
+    max-height: 200px;
+}
+
+.modal-banner img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+/* Ajuste no conteúdo do modal */
+.modal-content {
+    padding-top: 0; /* Compensa a margem negativa do banner */
+}
+
+/* Estilo do Botão do WhatsApp */
+.whatsapp-btn {
+    background-color: #25D366; /* Verde oficial do WhatsApp */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E; /* Verde mais escuro no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.inc {
+    background-color: #1C1C1B;
+    text-align: center;
+    padding: 10px;
+}
+
+.inc a1 {
+    color:#cccccc;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.spinner {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
